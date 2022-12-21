@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Eleventy">
+    <link rel="canonical" href="{{ site.canonical }}{{ page.url }}">
+    <title>
+      {{ site.name }}
+      {% if title %}
+        - {{ title }}
+      {% endif %}
+    </title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="/assets/js/site.js"></script>
+  </head>
+  <body class="bg-slate-100 p-5 text-lg text-stone-900 dark:bg-indigo-1200 dark:text-slate-100 sm:overflow-scroll sm:p-4 sm:text-base">
+    {% render "theme-selector" %}
+    <header class="mx-auto text-center">
+      <h1 class="my-2 text-3xl font-bold sm:text-4xl">{{ site.name }}</h1>
+    </header>
+    <nav class="mx-auto text-center">
+      <ul>
+        {% for nav in site.nav %}
+          <li class="inline not-first:before:mx-1 not-first:before:content-['|']">
+            <a
+              class="px-1 aria-current:bg-indigo-500 aria-current:text-slate-100"
+              {% if page.url == nav.url %}
+                aria-current="page"
+              {% endif %}
+              href="{{ nav.url }}"
+            >
+              {{- nav.name -}}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    <main class="dark:font-slate-50 mx-auto my-4 flex max-w-3xl flex-col items-center rounded-xl border-2 border-stone-900 py-4 shadow-lg shadow-slate-500/10 dark:border-inherit dark:bg-indigo-1100">
+      {{ content }}
+    </main>
+    <footer class="mx-auto text-center">
+      <p>Page last updated on {{ page.date | date: "%B %d, %Y" }}</p>
+    </footer>
+  </body>
+</html>

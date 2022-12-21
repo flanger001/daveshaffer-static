@@ -1,0 +1,5 @@
+dist
+.circleci
+*.json
+.eslintrc.js
+feed.liquid

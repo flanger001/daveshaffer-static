@@ -1,0 +1,39 @@
+---
+permalink: feed.xml
+metadata:
+    title: David Shaffer
+    subtitle: My personal website
+    language: en
+    url: https://www.daveshaffer.com/
+    author:
+        name: David Shaffer
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ metadata.url }}">
+    <title>{{ metadata.title }}</title>
+    <subtitle>{{ metadata.subtitle }}</subtitle>
+    <link href="{{ permalink | absoluteUrl: metadata.url }}" rel="self"/>
+    <link href="." xml:base="{{ permalink | absoluteUrl: metadata.url }}" />
+    <updated>{{ collections.pages | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+    <id>{{ metadata.url }}</id>
+    <author>
+        <name>{{ metadata.author.name }}</name>
+    </author>
+    {% assign sorted_posts = collections.posts | sort: "date" | reverse %}
+    {% for post in sorted_posts %}
+    {%- assign absolutePostUrl = post.url | absoluteUrl: metadata.url %}
+    <entry>
+        <title>{{ post.data.title }}</title>
+        <link href="{{ absolutePostUrl }}"/>
+        <updated>{{ post.date | dateToRfc3339 }}</updated>
+        <id>{{ absolutePostUrl }}</id>
+        <content xml:lang="{{ metadata.language }}" type="html">
+            {% capture content %}
+            <h1>{{ post.data.title }}</h1>
+                <article>{{ post.templateContent | strip_html }}</article>
+            {% endcapture %}
+            {{ content | escape }}
+        </content>
+    </entry>
+    {%- endfor %}
+</feed>

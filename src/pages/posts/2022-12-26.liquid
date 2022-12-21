@@ -1,0 +1,31 @@
+---
+title: A New Website
+---
+<p>This website used to be a Ruby on Rails application running on <a href="https://www.heroku.com">Heroku</a>.</p>
+<p class="mt-4">
+  When Heroku decided to get rid of their free plans for data hosting earlier this year, I reflected on whether I was
+  actually using the features of their platform. I had a nagging feeling that I did not
+  <span class="italic">really</span>
+  need to pay $7.56 per month to host a full Rails application with a ~150 MB slug size for a website that did almost
+  nothing except display a small amount of information that can be easily found elsewhere. The cost was small, but this
+  is definitely a "waste not, want not" type of thing.
+</p>
+<p class="mt-4">
+  At most I was using it to either proxy messages between Slack and my Google Drive music folder (a time-consuming and
+  error-prone process due to the sandboxing and restrictions necessary to make Google APIs work), or hack on getting new
+  Rails updates to work. After a while it stopped being fun. So I decided to take it down and start over.
+</p>
+<p class="mt-4">
+  Now we are here. This is now a static HTML website generated with <a href="https://11ty.dev">Eleventy</a>. I use
+  <a href="https://tailwindcss.com">Tailwind CSS</a> for the styling. It is hosted on
+  <a href="https://aws.amazon.com/s3/">Amazon S3</a>, and I use a
+  <a
+    href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-functions.html"
+    >CloudFront Function</a
+  >
+  to simulate the directory listing structure. Eleventy is fun to build with and surprisingly easy to learn.
+</p>
+<p class="mt-4">
+  I am not sure what I will make out of this website. It might turn into a full blog like I used to have, or it might
+  rot. Who knows?
+</p>

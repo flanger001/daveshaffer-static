@@ -1,0 +1,46 @@
+[
+    {
+        "name": "Games",
+        "url": "https://steamcommunity.com/id/flanger001"
+    },
+    {
+        "name": "xkcd",
+        "url": "https://xkcd.com/"
+    },
+    {
+        "name": "Dinosaur Comics",
+        "url": "https://qwantz.com/"
+    },
+    {
+        "name": "Reddit",
+        "url": "https://reddit.com/"
+    },
+    {
+        "name": "Coffee",
+        "url": "https://www.wickedjoe.com/"
+    },
+    {
+        "name": "Drumming",
+        "url": "https://www.drummerworld.com/"
+    },
+    {
+        "name": "Music",
+        "url": "https://soundcloud.com/"
+    },
+    {
+        "name": "Rabbits",
+        "url": "https://rabbit.org/"
+    },
+    {
+        "name": "Ruby On Rails",
+        "url": "https://rubyonrails.org/"
+    },
+    {
+        "name": "Beer",
+        "url": "https://www.beeradvocate.com/"
+    },
+    {
+        "name": "Aqua Teen Hunger Force",
+        "url": "https://www.adultswim.com/videos/aqua-teen-hunger-force/"
+    }
+]

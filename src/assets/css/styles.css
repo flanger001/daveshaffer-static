@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Mona Sans";
+  src: url("/assets/fonts/Mona-Sans.woff2") format("woff2 supports variations"),
+    url("/assets/fonts/Mona-Sans.woff2") format("woff2-variations");
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+}
+
+a {
+  @apply rounded-md
+        py-1
+        text-violet-900
+        underline
+        transition-all
+        visited:text-violet-200
+        hover:bg-violet-100
+        focus:bg-violet-100
+        dark:text-violet-400
+        dark:hover:bg-slate-800
+        dark:focus:bg-slate-800;
+}

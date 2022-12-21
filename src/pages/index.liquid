@@ -1,0 +1,28 @@
+---
+layout: post
+title: Welcome!
+permalink: /
+---
+<h3 class="text-lg">Hi there! I'm David.</h3>
+<div class="mt-4 sm:grid sm:grid-cols-3">
+  <p class="col-span-2">
+    I am a musician and software developer. I try to be a pretty nice person. I am glad you made it to my website. Have
+    a look around and hopefully you will find something nice!
+  </p>
+  <div class="overflow-hidden">
+    <img class="mx-auto mt-4 w-[5.5rem] scale-110 sm:mt-0" src="/assets/images/dave4.jpg" alt="A photo of me">
+  </div>
+</div>
+<p class="mt-4">
+  By day I work at <a href="https://www.truecar.com/">TrueCar</a>. By night, I perform with my wife Maria in a group
+  called Awful Falafel.
+</p>
+
+{% if collections.posts %}
+  <p class="mt-4">
+    My latest post:
+    {% assign latest_post = collections.posts.last %}
+    <a href="{{ latest_post.url }}">{{ latest_post.data.title }}</a> ({{ latest_post.date | date: "%B %d, %Y" }})
+  </p>
+{% endif %}
+<p class="mt-4">Pronouns: any/all. Gender is a social construct.</p>

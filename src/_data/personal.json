@@ -1,0 +1,22 @@
+[
+    {
+        "name": "YouTube",
+        "url": "https://www.youtube.com/flanger001",
+        "title": "YouTube"
+    },
+    {
+        "name": "GitHub profile",
+        "url": "https://github.com/flanger001",
+        "title": "GitHub"
+    },
+    {
+        "name": "Instagram",
+        "url": "https://www.instagram.com/flanger001/",
+        "title": "Instagram"
+    },
+    {
+        "name": "Gas Tracker",
+        "url": "https://gas.daveshaffer.co/",
+        "title": "Gas Tracker (temporarily offline)"
+    }
+]
