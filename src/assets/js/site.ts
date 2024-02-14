@@ -1,4 +1,4 @@
-const ready = () => {
+function ready() {
     const themeSelector = <HTMLInputElement>document.getElementById("theme-selector")
     const getTheme = (): string | null => localStorage.getItem("theme")
     const setTheme = (value: string): void => localStorage.setItem("theme", value)
@@ -13,8 +13,9 @@ const ready = () => {
     }
 
     if (themeSelector) {
-        const hasDarkThemeSetting =
-            getTheme() === "dark" || (getTheme() == null && window.matchMedia("(prefers-color-scheme: dark)").matches)
+        const hasDarkThemeSetting = getTheme() === "dark" ||
+            (getTheme() == null && window.matchMedia("(prefers-color-scheme: dark)").matches)
+
         if (hasDarkThemeSetting) {
             document.documentElement.classList.add("dark")
         } else {
